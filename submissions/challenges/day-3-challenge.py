@@ -1,6 +1,12 @@
 n = "Narrator:"
 c = None
 
+print("================================================================================================")
+print("|                                                                                              |")
+print("|                             Alf's Short Adventure!                                           |")
+print("|                                                                                              |")
+print("================================================================================================")
+
 print(f"{n} One day, while Alf was walking on the field, a mysterious man in a suit arrived.")
 
 print("\nDo you want to talk to him? (yes [y] | no [n])")
