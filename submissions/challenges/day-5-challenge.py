@@ -96,4 +96,5 @@ elif ans == 1:
             print("That's not one of the choices! Now the game will end because of you :c")
     else:
         print("That's not one of the choices! Now the game will end because of you :c")
-
+else:
+    print("Invalid Input: Only choose from 1 or 2")
