@@ -1,6 +1,7 @@
 choice = 0
 itemList = []
 item = None
+confirm = False
 
 def options():
     print("Options:")
@@ -22,9 +23,10 @@ def switchCase(choice):
         item = input("Enter the item you want to remove: ").lower()
         RemoveItem(item)
     elif choice == 4:
-        print("")
+        confirm = input("Do you really want to quit? (y/n): ").lower()
+        ExitConfirm(confirm)
     else:
-        print("")
+        print(f"Invalid Input: {choice} is not one of the choices. Please choose from 1-4 only.")
 
 def AddItem(item):
     itemList.append(item)
@@ -40,5 +42,13 @@ def RemoveItem(item):
     itemList.remove(item)
     print(f"{item} has been removed from your shopping list")
 
+def ExitConfirm(confirm):
+    if confirm == "y":
+        confirm = True
+    elif confirm == "n":
+        confirm = False
+    else:
+        print("Invalid Input: Only type 'y' or 'n'")
+        
 options()
 
