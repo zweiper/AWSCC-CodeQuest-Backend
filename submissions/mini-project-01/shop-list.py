@@ -44,21 +44,33 @@ def ViewList():
         options()
     
 def RemoveItem(item):
-    if len(itemList) == 0:
-        print("Your shopping list is empty")
-    else: 
+    if item in itemList:
         itemList.remove(item)
         print(f"{item} has been removed from your shopping list")
+    elif len(itemList) == 0:
+        print("Your shopping list is empty")
+    else: 
+        print(f"{item} is not in your shopping list")
     options()
     
 def ExitConfirm(confirm):
     if confirm == "y":
-        print("Goodbye! Thank you!")
+        print("\n--Goodbye! Thank you!--\n")
     elif confirm == "n":
         options()
     else:
         print("Invalid Input: Only type 'y' or 'n'")
         options()
 
+def intro():
+    print("================================================================================================")
+    print("|                                                                                              |")
+    print("|                                        Shop Lister                                           |")
+    print("|                                                                                              |")
+    print("================================================================================================")       
+
+    print("\n Welcome to the Shop Lister! Simple add, remove, and edit your shopping list!\n")
+
+intro() 
 options()
 
