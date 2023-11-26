@@ -38,12 +38,17 @@ def ViewList():
         print("Your shopping list is empty")
         options()   
     else:
-        print(f"Your shopping list:\n{itemList}")
+        print("\nYour shopping list:")
+        for item in itemList:
+            print(item)
         options()
     
 def RemoveItem(item):
-    itemList.remove(item)
-    print(f"{item} has been removed from your shopping list")
+    if len(itemList) == 0:
+        print("Your shopping list is empty")
+    else: 
+        itemList.remove(item)
+        print(f"{item} has been removed from your shopping list")
     options()
     
 def ExitConfirm(confirm):
