@@ -1,18 +1,17 @@
 choice = 0
 itemList = []
 item = None
-confirm = True
+confirm = None
 
 def options():
-    while confirm == True:
-        print("Options:")
-        print("\t1. Add item to the shopping list")
-        print("\t2. View shopping list")
-        print("\t3. Remove item from the shopping list")
-        print("\t4. Quit")
+    print("\nOptions:")
+    print("\t1. Add item to the shopping list")
+    print("\t2. View shopping list")
+    print("\t3. Remove item from the shopping list")
+    print("\t4. Quit")
 
-        choice = int(input("\nEnter the number of your choice: "))
-        switchCase(choice)
+    choice = int(input("\nEnter the number of your choice: "))
+    switchCase(choice)
 
 def switchCase(choice):
     if choice == 1:
@@ -49,9 +48,9 @@ def RemoveItem(item):
     
 def ExitConfirm(confirm):
     if confirm == "y":
-        confirm = True
+        print("Goodbye! Thank you!")
     elif confirm == "n":
-        confirm = False
+        options()
     else:
         print("Invalid Input: Only type 'y' or 'n'")
         options()
